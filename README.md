@@ -33,7 +33,6 @@ The goal of this project was to clean and prepare an e-commerce dataset to impro
 
 ✅ Project 1 Completed
 
----
 
 ## Upcoming Projects
 
@@ -41,7 +40,6 @@ The goal of this project was to clean and prepare an e-commerce dataset to impro
 - Project 3 – Coming Soon
 - Project 4 – Coming Soon
 
----
 
 ## About
 
