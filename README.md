@@ -20,6 +20,24 @@ The goal of this project was to clean and prepare an e-commerce dataset to impro
 - Created Year and Month features from the Date column.
 - Saved the cleaned and prepared dataset.
 
+## Project 2: Exploratory Data Analysis (EDA)
+
+### Project Overview
+
+The goal of this project was to explore the cleaned e-commerce dataset, identify patterns and trends, and extract meaningful insights through statistical analysis and data visualization.
+
+### Tasks Performed
+
+- Analyzed numerical features using descriptive statistics.
+- Examined categorical variables and their distributions.
+- Explored sales trends using date-based features.
+- Identified top-performing products based on sales and revenue.
+- Analyzed payment methods and order statuses.
+- Evaluated customer acquisition sources.
+- Performed correlation analysis between numerical variables.
+- Created visualizations to better understand data patterns.
+- Documented key findings and business insights.
+
 ### Tools Used
 
 - Python
