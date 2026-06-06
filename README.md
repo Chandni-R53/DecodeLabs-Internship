@@ -50,11 +50,11 @@ The goal of this project was to explore the cleaned e-commerce dataset, identify
 ### Project Status
 
 ✅ Project 1 Completed
+✅ Project 2 Completed
 
 
 ## Upcoming Projects
 
-- Project 2 – Coming Soon
 - Project 3 – Coming Soon
 - Project 4 – Coming Soon
 
