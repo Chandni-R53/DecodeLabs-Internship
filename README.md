@@ -1,64 +1,84 @@
-# Data Analytics Internship – DecodeLabs
+## DecodeLabs Virtual Internship — Data Analytics Track  
 
-This repository contains the projects completed during my Data Analytics Internship at DecodeLabs.
+A summer internship program where I'm working through structured, real-world data projects — from raw messy data all the way to analysis and insights.
 
-## Project 1: Data Cleaning & Preparation
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
-### Project Overview
+---
 
-The goal of this project was to clean and prepare an e-commerce dataset to improve data quality and make it ready for future analysis.
+### About
 
-### Tasks Performed
+**Organization:** DecodeLabs  
+**Track:** Data Analytics  
+**Dataset:** E-commerce orders  
+**Duration:** Summer 2026  
 
-- Handled missing values in the CouponCode column.
-- Checked for duplicate records.
-- Validated the uniqueness of OrderID values.
-- Verified Quantity and UnitPrice values.
-- Validated TotalPrice calculations.
-- Checked consistency between Quantity and ItemsInCart.
-- Reviewed categorical columns for formatting and consistency.
-- Created Year and Month features from the Date column.
-- Saved the cleaned and prepared dataset.
+Each project in this program focuses on one phase of a real data workflow. The projects build on each other — Project 1's cleaned output feeds directly into Project 2's analysis.
 
-## Project 2: Exploratory Data Analysis (EDA)
+---
 
-### Project Overview
+### Projects
 
-The goal of this project was to explore the cleaned e-commerce dataset, identify patterns and trends, and extract meaningful insights through statistical analysis and data visualization.
+#### ✅ Project 1 — Data Cleaning & Preparation
 
-### Tasks Performed
+**What I worked on:**
 
-- Analyzed numerical features using descriptive statistics.
-- Examined categorical variables and their distributions.
-- Explored sales trends using date-based features.
-- Identified top-performing products based on sales and revenue.
-- Analyzed payment methods and order statuses.
-- Evaluated customer acquisition sources.
-- Performed correlation analysis between numerical variables.
-- Created visualizations to better understand data patterns.
-- Documented key findings and business insights.
+- Identified and handled missing values in the `CouponCode` column
+- Detected and removed duplicate records
+- Validated `OrderID` uniqueness across the dataset
+- Verified that `Quantity` and `UnitPrice` values were within valid ranges
+- Cross-checked `TotalPrice` against expected `Quantity × UnitPrice` values
+- Checked consistency between the `Quantity` and `ItemsInCart` columns
+- Standardized formatting across categorical columns
+- Extracted `Year` and `Month` features from the `Date` column for time-based analysis
+- Exported the cleaned dataset for use in Project 2
+
+📁 [`data_cleaning.ipynb`](./Project-1/data_cleaning.ipynb)
+
+---
+
+#### ✅ Project 2 — Exploratory Data Analysis (EDA)
+
+**What I worked on:**
+
+- Computed descriptive statistics for all numerical features
+- Analyzed distributions of categorical variables
+- Explored monthly and yearly sales trends using the date features from Project 1
+- Ranked top-performing products by both sales volume and revenue
+- Broke down orders by payment method and order status
+- Analyzed which customer acquisition sources drove the most orders
+- Built a correlation matrix to examine relationships between numerical variables
+- Created visualizations — bar charts, distribution plots, heatmaps — to support each finding
+- Wrote up key findings and business insights 
+ 
+📁 [`EDA.ipynb`](./Project-2/EDA.ipynb)
+
+---
+
+#### 🔜 Project 3 — Coming Soon
+
+#### 🔜 Project 4 — Coming Soon
+
+---
 
 ### Tools Used
 
-- Python
-- Pandas
-- Jupyter Notebook
-- VS Code
-- Git
-- GitHub
+| Purpose | Tool |
+|---|---|
+| Language | Python |
+| Data manipulation | Pandas |
+| Visualization | Matplotlib, Seaborn |
+| Environment | Jupyter Notebook |
+| Editor | VS Code |
+| Version control | Git & GitHub |
 
-### Project Status
+---
 
-✅ Project 1 Completed
-✅ Project 2 Completed
+### About Me
 
+I'm Chandni, a 2nd-year B.Tech (IoT) student at MITS-DU (2024–28). I'm doing this internship over my summer break to build real, practical skills in data analytics — working toward a career in Data Science and Data Analytics.
 
-## Upcoming Projects
-
-- Project 3 – Coming Soon
-- Project 4 – Coming Soon
-
-
-## About
-
-This internship is helping me gain hands-on experience in data cleaning, data preparation, and data analysis using real-world datasets.
