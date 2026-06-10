@@ -23,7 +23,7 @@ Each project in this program focuses on one phase of a real data workflow. The p
 
 ### Projects
 
-#### ✅ Project 1 — Data Cleaning & Preparation
+#### Project 1 — Data Cleaning & Preparation
 
 **What I worked on:**
 
@@ -41,7 +41,7 @@ Each project in this program focuses on one phase of a real data workflow. The p
 
 ---
 
-#### ✅ Project 2 — Exploratory Data Analysis (EDA)
+#### Project 2 — Exploratory Data Analysis (EDA)
 
 **What I worked on:**
 
@@ -56,12 +56,6 @@ Each project in this program focuses on one phase of a real data workflow. The p
 - Wrote up key findings and business insights 
  
 📁 [`EDA.ipynb`](./Project-2/EDA.ipynb)
-
----
-
-#### 🔜 Project 3 — Coming Soon
-
-#### 🔜 Project 4 — Coming Soon
 
 ---
 
