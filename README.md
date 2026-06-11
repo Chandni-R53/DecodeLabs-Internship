@@ -17,7 +17,7 @@ A summer internship program where I'm working through structured, real-world dat
 **Dataset:** E-commerce orders  
 **Duration:** Summer 2026  
 
-Each project in this program focuses on one phase of a real data workflow. The projects build on each other — Project 1's cleaned output feeds directly into Project 2's analysis.
+Each project in this program focuses on one phase of a real data workflow. The projects build on each other — Project 1's cleaned output feeds directly into Project 2's analysis, and Project 3 takes the same dataset into SQL-based querying.
 
 ---
 
@@ -53,9 +53,25 @@ Each project in this program focuses on one phase of a real data workflow. The p
 - Analyzed which customer acquisition sources drove the most orders
 - Built a correlation matrix to examine relationships between numerical variables
 - Created visualizations — bar charts, distribution plots, heatmaps — to support each finding
-- Wrote up key findings and business insights 
+- Documented key findings and business insights 
  
 📁 [`EDA.ipynb`](./Project-2/EDA.ipynb)
+
+---
+
+#### Project 3 — SQL-Based Data Analysis
+
+**What I worked on:**
+
+- Queried the e-commerce dataset using SQL to extract business insights
+- Analyzed revenue and order count by payment method, referral source, and order status
+- Identified top-performing products by sales volume and revenue
+- Explored monthly sales trends to find peak periods
+- Analyzed customer purchase frequency and retention patterns
+- Documented actionable insights based on query results
+
+📁 [`sql_queries.sql`](./Project-3/sql_queries.sql)
+📁 [`key_findings.text`](./Project-3/key_findings.text)
 
 ---
 
@@ -63,7 +79,7 @@ Each project in this program focuses on one phase of a real data workflow. The p
 
 | Purpose | Tool |
 |---|---|
-| Language | Python |
+| Language | Python, SQL |
 | Data manipulation | Pandas |
 | Visualization | Matplotlib, Seaborn |
 | Environment | Jupyter Notebook |
