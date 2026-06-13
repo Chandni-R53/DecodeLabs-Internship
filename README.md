@@ -87,9 +87,7 @@ Each project in this program focuses on one phase of a real data workflow. The p
 | Editor | VS Code |
 | Version control | Git & GitHub |
 
----
 
-### About Me
 
-I'm Chandni, a 2nd-year B.Tech (IoT) student at MITS-DU (2024–28). I'm doing this internship over my summer break to build real, practical skills in data analytics — working toward a career in Data Science and Data Analytics.
+
 
