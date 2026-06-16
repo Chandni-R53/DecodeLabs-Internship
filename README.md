@@ -5,6 +5,7 @@ A summer internship program where I'm working through structured, real-world dat
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
@@ -76,13 +77,56 @@ Each project in this program focuses on one phase of a real data workflow. The p
 
 ---
 
+#### Project 4 — Data Visualization
+
+**What I worked on:**
+
+- Queried the e-commerce dataset using SQL to extract business insights
+- Analyzed revenue and order count by payment method, referral source, and order status
+- Identified top-performing products by sales volume and revenue
+- Explored monthly sales trends to find peak periods
+- Analyzed customer purchase frequency and retention patterns
+- Documented actionable insights based on query results
+
+📁 [`app.py`](Project-4/app.py)
+
+**Dashboard Preview**
+![Dashboard](Project-4/dashboard.png)
+
+---
+
+### Folder Structure
+
+```
+DecodeLabs_Internship_Projects/
+│
+├── Project-1/
+│   └── data_cleaning.ipynb
+│
+├── Project-2/
+│   └── EDA.ipynb
+│
+├── Project-3/
+│   ├── sql_queries.sql
+│   └── key_findings.txt
+│
+├── Project-4/
+│   ├── app.py
+│   └── dashboard.png
+│
+└── README.md
+```
+
+---
+
 ### Tools Used
 
 | Purpose | Tool |
 |---|---|
 | Language | Python, SQL |
 | Data manipulation | Pandas |
-| Visualization | Matplotlib, Seaborn |
+| Visualization | Matplotlib, Seaborn, Plotly |
+| Dashboard Development | Streamlit |
 | Environment | Jupyter Notebook |
 | Editor | VS Code |
 | Version control | Git & GitHub |

@@ -2,23 +2,23 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# PAGE CONFIG 
 st.set_page_config(
     page_title="E-Commerce Dashboard",
     layout="wide"
 )
-# KPI DATA
+# DATA 
 total_orders = 1200
 total_revenue = 1264761.96
 avg_order_value = 1053.97
-# CHART DATA 
 product_revenue = {
-    "Chair": 195620,
-    "Printer": 195613,
-    "Laptop": 192127,
-    "Tablet": 186569,
-    "Monitor": 175651,
-    "Desk": 167460,
-    "Phone": 151722
+    "Chair":195620,
+    "Printer":195613,
+    "Laptop":192127,
+    "Tablet":186569,
+    "Monitor":175651,
+    "Desk":167460,
+    "Phone":151722
 }
 monthly_revenue = {
     "Jan":124313,
@@ -55,16 +55,33 @@ order_status = {
     "Shipped":235,
     "Delivered":231
 }
-# TITLE
-st.title("📊 E-Commerce Sales Analytics Dashboard")
-# KPI CARDS
-c1, c2, c3 = st.columns(3)
-c1.metric("Total Orders", f"{total_orders}")
-c2.metric("Total Revenue", f"₹{total_revenue:,.0f}")
-c3.metric("Avg Order Value", f"₹{avg_order_value:.2f}")
-st.divider()
+avg_revenue_product = {
+    "Laptop":1110.56,
+    "Chair":1098.99,
+    "Printer":1080.73,
+    "Monitor":1077.62,
+    "Tablet":1042.28,
+    "Desk":985.06,
+    "Phone":972.58
+}
+# TITLE 
+st.title("📊 E-Commerce Sales Dashboard")
+# KPI CARDS 
+c1, c2, c3, c4 = st.columns(4)
+c1.metric("Total Orders", "1200")
+c2.metric("Total Revenue", "₹12.65L")
+c3.metric("Average Order Value", "₹1054")
+c4.metric("Top Channel", "Instagram")
+# CHART STYLE 
+def compact_chart(fig):
+    fig.update_layout(
+        height=230,
+        margin=dict(l=5, r=5, t=35, b=5),
+        showlegend=False
+    )
+    return fig
 # ROW 1 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 with col1:
     df = pd.DataFrame(
         product_revenue.items(),
@@ -76,7 +93,11 @@ with col1:
         y="Revenue",
         title="Revenue by Product"
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
+    )
 with col2:
     df = pd.DataFrame(
         monthly_revenue.items(),
@@ -87,12 +108,36 @@ with col2:
         x="Month",
         y="Revenue",
         markers=True,
-        title="Monthly Revenue Trend"
+        title="Monthly Revenue"
     )
-    st.plotly_chart(fig, use_container_width=True)
-# ROW 2
-col3, col4 = st.columns(2)
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
+    )
 with col3:
+    df = pd.DataFrame(
+        payment_revenue.items(),
+        columns=["Payment", "Revenue"]
+    )
+    fig = px.pie(
+        df,
+        names="Payment",
+        values="Revenue",
+        title="Revenue by Payment Method"
+    )
+    fig.update_traces(
+    textposition="inside",
+    textinfo='label+percent'
+    )
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
+    )
+# ROW 2 
+col4, col5, col6 = st.columns(3)
+with col4:
     df = pd.DataFrame(
         channel_revenue.items(),
         columns=["Channel", "Revenue"]
@@ -101,23 +146,13 @@ with col3:
         df,
         x="Channel",
         y="Revenue",
-        title="Revenue by Marketing Channel"
+        title="Marketing Channels"
     )
-    st.plotly_chart(fig, use_container_width=True)
-with col4:
-    df = pd.DataFrame(
-        payment_revenue.items(),
-        columns=["Payment Method", "Revenue"]
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
     )
-    fig = px.pie(
-        df,
-        names="Payment Method",
-        values="Revenue",
-        title="Revenue by Payment Method"
-    )
-    st.plotly_chart(fig, use_container_width=True)
-# ROW 3 
-col5, col6 = st.columns(2)
 with col5:
     df = pd.DataFrame(
         order_status.items(),
@@ -129,45 +164,37 @@ with col5:
         values="Count",
         title="Order Status Distribution"
     )
-    st.plotly_chart(fig, use_container_width=True)
-with col6:
-    top_orders = pd.DataFrame({
-        "Order ID":[
-            "ORD200789",
-            "ORD201122",
-            "ORD200632",
-            "ORD200469",
-            "ORD200328"
-        ],
-        "Amount":[
-            3456.40,
-            3390.95,
-            3390.80,
-            3384.90,
-            3370.20
-        ]
-    })
-    fig = px.bar(
-        top_orders,
-        x="Order ID",
-        y="Amount",
-        title="Top 5 Highest Value Orders"
+    fig.update_traces(
+    textposition="inside",
+    textinfo='label+percent'
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
+    )
+with col6:
+    df = pd.DataFrame(
+        avg_revenue_product.items(),
+        columns=["Product", "Avg Revenue"]
+    )
+    fig = px.bar(
+        df,
+        x="Product",
+        y="Avg Revenue",
+        title="Average Revenue per Product"
+    )
+    st.plotly_chart(
+        compact_chart(fig),
+        use_container_width=True,
+        config={"displayModeBar": False}
+    )
 # INSIGHTS 
-st.divider()
-st.subheader("📌 Business Insights")
+st.markdown("### Key Insights")
 st.markdown("""
-- Chair generated the highest revenue among all products.
-- Instagram was the highest revenue-generating marketing channel.
-- Credit Card users contributed the highest revenue.
-- June recorded peak monthly revenue performance.
-- Order cancellations remain high and require investigation.
-""")
-st.subheader("🚀 Recommendations")
-st.markdown("""
-- Increase investment in Instagram marketing campaigns.
-- Focus promotions on high-revenue products.
-- Investigate causes of order cancellations.
-- Encourage digital payment adoption through offers and rewards.
+- Instagram generated the highest revenue among marketing channels.
+- Credit Card customers contributed the most revenue.
+- June recorded the strongest monthly sales performance.
+- Chair was the highest revenue-generating product.
+- High cancellation volume requires further investigation.
 """)
