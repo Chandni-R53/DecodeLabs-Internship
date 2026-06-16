@@ -19,7 +19,7 @@ A summer internship program where I'm working through structured, real-world dat
 **Dataset:** E-commerce orders  
 **Duration:** Summer 2026  
 
-Each project in this program focuses on one phase of a real data workflow. The projects build on each other — Project 1's cleaned output feeds directly into Project 2's analysis, and Project 3 takes the same dataset into SQL-based querying.
+Each project in this program focuses on one phase of a real data workflow. The projects build on each other — Project 1's cleaned output feeds directly into Project 2's analysis, and Project 3 takes the same dataset into SQL-based querying, and Project 4 presents the insights through an interactive dashboard.
 
 ---
 
@@ -81,12 +81,12 @@ Each project in this program focuses on one phase of a real data workflow. The p
 
 **What I worked on:**
 
-- Queried the e-commerce dataset using SQL to extract business insights
-- Analyzed revenue and order count by payment method, referral source, and order status
-- Identified top-performing products by sales volume and revenue
-- Explored monthly sales trends to find peak periods
-- Analyzed customer purchase frequency and retention patterns
-- Documented actionable insights based on query results
+- Built an interactive e-commerce dashboard using Streamlit and Plotly
+- Designed KPI cards to track key business metrics
+- Analyzed product, payment, and marketing channel performance
+- Visualized revenue trends, product performance, and order patterns using interactive charts
+- Identified actionable insights to support business decisions
+- Presented findings through a centralized dashboard interface
 
 📁 [`app.py`](Project-4/app.py)
 
